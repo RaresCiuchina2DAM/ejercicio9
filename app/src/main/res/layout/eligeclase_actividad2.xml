@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EligeclaseActivity"
 
+    >
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="335dp"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/inicio"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/imagen_de_inicio" />
 
     <Button
         android:id="@+id/BtnGuerrero"
@@ -31,7 +31,7 @@
         android:layout_marginBottom="51dp"
         android:fontFamily="times"
         android:shadowColor="#786D6D"
-        android:text="GUERRERO"
+        android:text="@string/guerrero"
         app:layout_constraintBottom_toTopOf="@+id/btnMago"
         app:layout_constraintEnd_toStartOf="@+id/btnLadron"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +45,8 @@
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="51dp"
         android:fontFamily="times"
-        android:text="LADRON"
-        app:layout_constraintBottom_toTopOf="@+id/btnElfo"
+        android:text="@string/ladron"
+        app:layout_constraintBottom_toTopOf="@+id/berserker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/BtnGuerrero"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -59,20 +59,20 @@
         android:layout_marginEnd="104dp"
         android:layout_marginBottom="183dp"
         android:fontFamily="times"
-        android:text="MAGO"
+        android:text="@string/mago"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnElfo"
+        app:layout_constraintEnd_toStartOf="@+id/berserker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnGuerrero" />
 
     <Button
-        android:id="@+id/btnElfo"
+        android:id="@+id/berserker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="71dp"
         android:layout_marginBottom="50dp"
         android:fontFamily="times"
-        android:text="BERSERKER"
+        android:text="@string/berserker"
         app:layout_constraintBottom_toTopOf="@+id/btnAceptar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -87,10 +87,9 @@
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="85dp"
         android:fontFamily="times"
-        android:text="Aceptar"
+        android:text="@string/aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnElfo" />
-
+        app:layout_constraintTop_toBottomOf="@+id/berserker" />
 </androidx.constraintlayout.widget.ConstraintLayout>

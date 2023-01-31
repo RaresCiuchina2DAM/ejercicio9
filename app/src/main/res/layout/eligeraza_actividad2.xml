@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:backgroundTint="@null"
-
-
+    tools:context=".EligerazaActivity"
     >
 
     <ImageView
@@ -22,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/inicio" />
+        tools:srcCompat="@drawable/inicio"
+        android:contentDescription="@string/imagen_de_inicio" />
 
     <Button
         android:id="@+id/BtnElfo"
@@ -32,7 +30,7 @@
         android:layout_marginBottom="27dp"
         android:backgroundTint="@null"
         android:fontFamily="times"
-        android:text="ELFO"
+        android:text="@string/elfo"
         app:layout_constraintBottom_toTopOf="@+id/btnAceptar"
         app:layout_constraintEnd_toStartOf="@+id/BtnEnano"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +44,7 @@
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="27dp"
         android:fontFamily="times"
-        android:text="ENANO"
+        android:text="@string/enano"
         android:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/btnAceptar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +58,7 @@
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="35dp"
         android:fontFamily="times"
-        android:text="GOBLIN"
+        android:text="@string/goblin"
         android:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/BtnEnano"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +75,7 @@
         android:layout_marginBottom="35dp"
         android:fontFamily="times"
         android:backgroundTint="@null"
-        android:text="HUMANO"
+        android:text="@string/humano"
         app:layout_constraintBottom_toTopOf="@+id/BtnElfo"
         app:layout_constraintEnd_toStartOf="@+id/BtnGoblin"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,14 +83,14 @@
 
     <Button
         android:id="@+id/btnAceptar"
-        android:layout_width="331dp"
-        android:layout_height="62dp"
+        android:layout_width="277dp"
+        android:layout_height="60dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="66dp"
-        android:fontFamily="times"
         android:backgroundTint="@null"
-        android:text="Aceptar"
+        android:fontFamily="times"
+        android:text="@string/aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Ejercicio9Resumen"
         tools:targetApi="31">
         <activity
+            android:name=".ResumenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EligerazaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EligeclaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -14,31 +14,32 @@
     app:layout_constraintTop_toTopOf="parent"
     >
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="times"
-        tools:context=".ResumenActivity">
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:background="#000000"
+        android:orientation="vertical"
+        >
 
 
-        <TextView
-            android:id="@+id/Resumen"
-            android:layout_width="321dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="43dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="@string/hasta_ahora_has_seleccionado_los_siguientes_atributos_para_tu_personaje"
-            android:textSize="30sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/tvNombre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <TableRow>
+            <TextView
+                android:id="@+id/Resumen"
+                android:layout_width="321dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="37dp"
+                android:layout_marginBottom="43dp"
+                android:fontFamily="times"
+                android:gravity="center"
+                android:text="@string/hasta_ahora_has_seleccionado_los_siguientes_atributos_para_tu_personaje"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+           />
+        </TableRow>
+
 
         <TextView
             android:id="@+id/tvNombre"
@@ -51,13 +52,10 @@
             android:fontFamily="times"
             android:text="@string/ingrese_su_nombre"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/EtNombre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+         />
 
-
-        <EditText
+        <TableRow>
+            <EditText
             android:id="@+id/EtNombre"
             android:layout_width="248dp"
             android:layout_height="43dp"
@@ -65,12 +63,7 @@
             android:layout_marginEnd="1dp"
             android:layout_marginBottom="12dp"
             android:ems="10"
-            android:hint=""
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/resumen2"
-            app:layout_constraintEnd_toStartOf="@+id/btnAsignar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
         <Button
             android:id="@+id/btnAsignar"
@@ -81,12 +74,10 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="18dp"
             android:text="@string/Asignar"
-            app:layout_constraintBottom_toTopOf="@+id/resumen2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/EtNombre"
-            app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
+        </TableRow>
 
+        <TableRow>
         <TextView
             android:id="@+id/resumen2"
             android:layout_width="269dp"
@@ -100,245 +91,220 @@
             android:text="Has elegido que tu personaje sea:"
             android:textSize="30sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/MostrarNombreAsignado"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EtNombre" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="112dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="58dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="32dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="Nombre:"
-            app:layout_constraintBottom_toTopOf="@+id/ImagenClase"
-            app:layout_constraintEnd_toStartOf="@+id/MostrarNombreAsignado"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resumen2" />
+        </TableRow>
 
-        <TextView
-            android:id="@+id/MostrarNombreAsignado"
-            android:layout_width="200dp"
-            android:layout_height="45dp"
-            android:layout_marginEnd="37dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text=""
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/ImagenClase"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/resumen2" />
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="112dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginBottom="32dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text="Nombre:"
 
-        <ImageView
-            android:id="@+id/ImagenClase"
-            android:layout_width="150dp"
-            android:layout_height="180dp"
-
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="29dp"
-            android:layout_marginBottom="23dp"
-            app:layout_constraintBottom_toTopOf="@+id/monedero"
-            app:layout_constraintEnd_toStartOf="@+id/ImagenRaza"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/MostrarNombreAsignado"
-            android:contentDescription="imagenclase" />
-
-        <ImageView
-            android:id="@+id/ImagenRaza"
-            android:layout_width="150dp"
-            android:layout_height="180dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/tvmonedero"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImagenClase"
-            app:layout_constraintTop_toBottomOf="@+id/MostrarNombreAsignado"
-            android:contentDescription="ImagenRaza" />
-
-        <TextView
-            android:id="@+id/fuerza"
-            android:layout_width="184dp"
-            android:layout_height="23dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="Fuerza :"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toStartOf="@+id/tvfuerza"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vida" />
-
-        <TextView
-            android:id="@+id/defensa"
-            android:layout_width="185dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="Defensa:"
-            app:layout_constraintBottom_toTopOf="@+id/tamanyoMochila"
-            app:layout_constraintEnd_toStartOf="@+id/tvdefensa"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/monedero" />
-
-        <TextView
-            android:id="@+id/tamanyoMochila"
-            android:layout_width="185dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="Tamaño de la Mochila:"
-            app:layout_constraintBottom_toTopOf="@+id/vida"
-            app:layout_constraintEnd_toStartOf="@+id/tvtamanyoMochila"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/defensa" />
-
-        <TextView
-            android:id="@+id/vida"
-            android:layout_width="183dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="26dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="Vida:"
-            app:layout_constraintBottom_toTopOf="@+id/fuerza"
-            app:layout_constraintEnd_toStartOf="@+id/tvvida"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tamanyoMochila" />
-
-        <TextView
-            android:id="@+id/monedero"
-            android:layout_width="185dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="12dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text="Monedas en tu monedero:"
-            app:layout_constraintBottom_toTopOf="@+id/defensa"
-            app:layout_constraintEnd_toStartOf="@+id/tvmonedero"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ImagenRaza" />
-
-        <TextView
-            android:id="@+id/tvfuerza"
-            android:layout_width="126dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="31dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text=""
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/fuerza"
-            app:layout_constraintTop_toBottomOf="@+id/tvvida" />
-
-        <TextView
-            android:id="@+id/tvdefensa"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="37dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text=""
-            app:layout_constraintBottom_toTopOf="@+id/tvtamanyoMochila"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/defensa"
-            app:layout_constraintTop_toBottomOf="@+id/tvmonedero" />
-
-        <TextView
-            android:id="@+id/tvtamanyoMochila"
-            android:layout_width="122dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="35dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/tvvida"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tamanyoMochila"
-            app:layout_constraintTop_toBottomOf="@+id/tvdefensa" />
-
-        <TextView
-            android:id="@+id/tvvida"
-            android:layout_width="124dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="33dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/tvfuerza"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/vida"
-            app:layout_constraintTop_toBottomOf="@+id/tvtamanyoMochila" />
-
-        <TextView
-            android:id="@+id/tvmonedero"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="7dp"
-            android:fontFamily="times"
-            android:gravity="center"
-            android:text=""
-            app:layout_constraintBottom_toTopOf="@+id/tvdefensa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/monedero"
-            app:layout_constraintTop_toBottomOf="@+id/ImagenRaza" />
+                <TextView
+                    android:id="@+id/MostrarNombreAsignado"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="37dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text=""
+                    android:textStyle="bold|italic"
 
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginBottom="15dp"
-            android:text="Volver a empezar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button"
-            app:layout_constraintHorizontal_bias="0.615"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fuerza"
-            app:layout_constraintVertical_bias="0.0" />
+            </TableRow>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="144dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="1150dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginBottom="56dp"
-            android:text="Empezar la aventura"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/Resumen"
-            app:layout_constraintVertical_bias="1.0" />
+            <TableRow> <ImageView
+                android:id="@+id/ImagenClase"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginBottom="23dp"
+                android:contentDescription="imagenclase" />
+
+                <ImageView
+                    android:id="@+id/ImagenRaza"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="ImagenRaza" />
+
+                <ImageButton
+                    android:id="@+id/btnRaza"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="ImagenRaza"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/fuerza"
+                    android:layout_width="184dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text="Fuerza :"
+
+                <TextView
+                    android:id="@+id/tvfuerza"
+                    android:layout_width="126dp"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="31dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text=""
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/defensa"
+                    android:layout_width="185dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text="Defensa:"
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvdefensa"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="37dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text=""
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tamanyoMochila"
+                    android:layout_width="185dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text="Tamaño de la Mochila:"
+
+                <TextView
+                    android:id="@+id/tvtamanyoMochila"
+                    android:layout_width="122dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="35dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/vida"
+                    android:layout_width="183dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="26dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text="Vida:"
+
+
+                <TextView
+                    android:id="@+id/tvvida"
+                    android:layout_width="124dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="33dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/monedero"
+                    android:layout_width="185dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text="Monedas en tu monedero:"
+
+                <TextView
+                    android:id="@+id/tvmonedero"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="times"
+                    android:gravity="center"
+                    android:text=""
+
+            </TableRow>
+
+
+       <TableRow>
+
+           <Button
+               android:id="@+id/button2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="45dp"
+               android:layout_marginEnd="7dp"
+               android:layout_marginBottom="15dp"
+               android:text="Volver a empezar"/>
+
+           <Button
+               android:id="@+id/button"
+               android:layout_width="144dp"
+               android:layout_height="56dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="1150dp"
+               android:layout_marginEnd="41dp"
+               android:layout_marginBottom="56dp"
+               android:text="Empezar la aventura"
+        />
+       </TableRow>
+
+
+
+
+
+    </TableLayout>
 </ScrollView>
 
 

@@ -76,6 +76,7 @@
         android:fontFamily="times"
         android:backgroundTint="@null"
         android:text="@string/humano"
+
         app:layout_constraintBottom_toTopOf="@+id/BtnElfo"
         app:layout_constraintEnd_toStartOf="@+id/BtnGoblin"
         app:layout_constraintStart_toStartOf="parent"

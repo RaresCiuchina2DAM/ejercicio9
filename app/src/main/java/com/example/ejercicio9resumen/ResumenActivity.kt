@@ -72,12 +72,13 @@ class ResumenActivity : AppCompatActivity() {
         binding.tvmonedero.text = Monedero.toString()
 
         binding.button.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ActivityEj10::class.java)
             startActivity(intent)
         }
 
         binding.button2.setOnClickListener {
-            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
 

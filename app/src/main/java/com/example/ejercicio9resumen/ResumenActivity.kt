@@ -22,18 +22,17 @@ class ResumenActivity : AppCompatActivity() {
 
 
         val clase = intent.getStringExtra("clase")
-        val raza = intent.getStringExtra("raza")
 
         //Cuando la clase pasada por el intent sea humano, asignar al Imageview la imagen de persona
 
         when (clase.toString()) {
-            "Ladron" -> {
+            "ladron" -> {
                 binding.ImagenClase.setImageResource(R.drawable.descarga)
             }
-            "Mago" -> {
+            "mago" -> {
                 binding.ImagenClase.setImageResource(R.drawable.mago)
             }
-            "Guerrero" -> {
+            "guerrero" -> {
                 binding.ImagenClase.setImageResource(R.drawable.guerrero)
             }
             "berserker" -> {
@@ -42,26 +41,26 @@ class ResumenActivity : AppCompatActivity() {
         }
 
 
+        val raza = intent.getStringExtra("raza")
         //Cuando la raza pasada por el intent sea humano, asignar al Imageview la imagen de persona
         when (raza.toString()) {
-            "Humano" -> {
-                binding.btnRaza.setImageResource(R.drawable.persona)
+            "humano" -> {
+                binding.ImagenRaza.setImageResource(R.drawable.persona)
             }
-            "Elfo" -> {
-                binding.btnRaza.setImageResource(R.drawable.elfo)
+            "elfo" -> {
+                binding.ImagenRaza.setImageResource(R.drawable.elfo)
             }
-            "Enano" -> {
-                binding.btnRaza.setImageResource(enano)
+            "enano" -> {
+                binding.ImagenRaza.setImageResource(enano)
             }
-            "Goblin" -> {
-                binding.btnRaza.setImageResource(R.drawable.goblin)
+            "goblin" -> {
+                binding.ImagenRaza.setImageResource(R.drawable.goblin)
             }
         }
 
 
         //Cada vez que se pulsa el boton asignar, se asigna el nombre que se ha introducido en el edittext
         binding.btnAsignar.setOnClickListener {
-
             binding.MostrarNombreAsignado.text = binding.EtNombre.text
 
         }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="8dp"
@@ -12,11 +13,6 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     >
-
-
-<!--    crear un table layout de dos columnas-->
-
-
 
 
     <TableLayout
@@ -74,13 +70,14 @@
                     android:id="@+id/EtNombre"
                     android:layout_width="283dp"
                     android:layout_height="69dp"
-
+                    android:text=""
                     android:autofillHints="Nombre"
                     android:inputType="textPersonName" />
 
                 <Button
                     android:id="@+id/btnAsignar"
                     android:layout_height="59dp"
+                    android:layout_width="wrap_content"
                     android:text="@string/Asignar" />
 
             </TableRow>
@@ -148,17 +145,15 @@
                         android:contentDescription="imagenclase"
                         android:layout_marginStart="28dp"/>
 
-                    <ImageButton
-                        android:id="@+id/btnRaza"
+                    <ImageView
+                        android:id="@+id/ImagenRaza"
                         android:layout_width="150dp"
                         android:layout_height="180dp"
                         android:layout_marginTop="23dp"
                         android:layout_marginEnd="40dp"
                         android:layout_marginBottom="16dp"
-                        android:contentDescription="ImagenRaza"
-                        />
-
-
+                        android:contentDescription="imagenclase"
+                        android:layout_marginStart="28dp"/>
 
                 </TableRow>
             </TableRow>
@@ -217,16 +212,12 @@
                     android:layout_marginEnd="33dp"
                     android:fontFamily="times"
                     android:gravity="center"
-                    android:text=""
-                    />
-
-            </TableRow>
-
+                    android:text=""/>
+                </TableRow>
             </TableRow>
 
             <TableRow>
-
-                <TableRow>
+            <TableRow>
                 <TextView
                     android:id="@+id/tamanyoMochila"
                     android:layout_width="184dp"
@@ -237,8 +228,7 @@
                     android:layout_marginBottom="10dp"
                     android:fontFamily="times"
                     android:gravity="center"
-                    android:text="Tamaño de la Mochila:"
-                    />
+                    android:text="Tamaño de la Mochila:"/>
 
                 <TextView
                     android:id="@+id/tvtamanyoMochila"
@@ -249,7 +239,8 @@
                     android:fontFamily="times"
                     android:gravity="center"
                     />
-                </TableRow>
+
+            </TableRow>
 
             </TableRow>
 

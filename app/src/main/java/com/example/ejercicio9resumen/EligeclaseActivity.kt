@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ejercicio9resumen.databinding.EligeclaseActividad2Binding
-import com.example.ejercicio9resumen.databinding.EligerazaActividad2Binding
 
 
 class EligeclaseActivity : AppCompatActivity() {
@@ -14,40 +13,41 @@ class EligeclaseActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
+        val intent = Intent(this, ResumenActivity::class.java)
+
+        val recogeraza = intent.getStringExtra("raza")
+
         binding.imageView.setImageResource(R.drawable.inicio)
 
         binding.BtnGuerrero.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.guerrero)
-            binding.BtnGuerrero.isPressed
+            intent.putExtra("clase", "guerrero")
         }
 
         binding.btnMago.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.mago)
-            binding.btnMago.isPressed
+            intent.putExtra("clase", "mago")
+
         }
 
         binding.berserker.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.berserker)
-            binding.berserker.isPressed
+            intent.putExtra("clase", "berserker")
         }
 
         binding.btnLadron.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.descarga)
-            binding.btnLadron.isPressed
+            intent.putExtra("clase", "ladron")
         }
 
-        binding.btnAceptar.setOnClickListener {
-            val intent = Intent(this, ResumenActivity::class.java)
+        if (recogeraza == "elfo"){
+            binding.imageView2.setImageResource(R.drawable.elfo)
+        }
 
-            if (binding.BtnGuerrero.isPressed) {
-                intent.putExtra("clase", "Guerrero")
-            } else if (binding.btnMago.isPressed) {
-                intent.putExtra("clase", "Mago")
-            } else if (binding.berserker.isPressed) {
-                intent.putExtra("clase", "berserker")
-            } else if (binding.btnLadron.isPressed) {
-                intent.putExtra("clase", "Ladron")
-            }
+
+        binding.btnAceptar.setOnClickListener {
+            intent.putExtra("raza", recogeraza)
             startActivity(intent)
         }
 

@@ -17,55 +17,37 @@ class EligerazaActivity : AppCompatActivity() {
 
         binding.imageView.setImageResource(R.drawable.inicio)
 
+        val intent = Intent(this, EligeclaseActivity::class.java)
+
         binding.BtnElfo.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.elfo)
-            binding.BtnElfo.isPressed
+            intent.putExtra("raza", "elfo")
 
         }
 
         binding.BtnEnano.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.enano)
-            binding.BtnEnano.isPressed
+            intent.putExtra("raza", "enano")
         }
 
         binding.BtnGoblin.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.goblin)
-            binding.BtnGoblin.isPressed
+            intent.putExtra("raza", "goblin")
         }
 
         binding.BtnHumano.setOnClickListener {
             binding.imageView.setImageResource(R.drawable.persona)
-            binding.BtnHumano.isPressed
+            intent.putExtra("raza", "humano")
         }
 
-
-
-
-
-        //Cuando se pulsa el boton aceptar, se envia la raza elegida como texto a la actividad resumen, se cierra esta
-        //actividad y se abre la actividad elegir clase
 
         binding.btnAceptar.setOnClickListener {
-            val intent = Intent(this, EligeclaseActivity::class.java)
-            val intent2 = Intent(this, ResumenActivity::class.java)
-            if (binding.BtnElfo.isPressed) {
-                intent2.putExtra("raza", binding.BtnElfo.text)
-            } else if (binding.BtnEnano.isPressed) {
-                intent2.putExtra("raza", binding.BtnEnano.text)
-            } else if (binding.BtnGoblin.isPressed) {
-                intent2.putExtra("raza", binding.BtnGoblin.text)
-            } else if (binding.BtnHumano.isPressed) {
-                intent2.putExtra("raza", binding.BtnHumano.text)
-            }
-
             startActivity(intent)
-            finish()
+
         }
 
 
 
-
-        //Cuando se pulsa el bot
 
     }
 
